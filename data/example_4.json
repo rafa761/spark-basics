@@ -1,0 +1,7 @@
+{
+
+    "fruit": ["Apple", "Mango"],
+    "size": ["Large","Medium"],
+    "color": ["Red", "Orange"]
+
+}
