@@ -1,3 +1,4 @@
+import os
 from pyspark.sql import SparkSession
 from pyspark.ml.linalg import Vectors
 from pyspark.ml.feature import VectorAssembler
@@ -5,7 +6,7 @@ from pyspark.ml.clustering import KMeans
 
 spark = SparkSession.builder.getOrCreate()
 
-data_path = 'C:\\Projetos\\spark-basics\\data'
+data_path = os.getcwd() + '\\data'
 
 json_df1_path = data_path + '\\example_8.json'
 

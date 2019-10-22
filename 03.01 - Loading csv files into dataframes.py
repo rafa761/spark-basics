@@ -1,10 +1,11 @@
+import os
 from pyspark.sql import SparkSession
 
 spark = SparkSession.builder.getOrCreate()
 
 spark
 
-data_path = 'C:\\Projetos\\spark-basics\\data'
+data_path = os.getcwd() + '\\data'
 file_path = data_path + '\\spark-data.csv'
 
 df1 = spark.read.format("csv").option("header", "true").load(file_path)

@@ -1,7 +1,8 @@
+import os
 from pyspark.sql import SparkSession
 spark = SparkSession.builder.getOrCreate()
 
-data_path = 'C:\\Projetos\\spark-basics\\data'
+data_path = os.getcwd() + '\\data'
 
 json_df1_path = data_path + '\\example_5.json'
 # df1 = spark.read.format("json").load(json_df1_path)
